@@ -1,210 +1,320 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilbert Donato Portfolio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-body{
-    background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
-}
+        body {
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
 
-/* Header */
-header{
-    background:#0d3b2e;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-}
+        /* Header */
+        header {
+            background: #0d3b2e;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
 
-header img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    border:4px solid white;
-    object-fit:cover;
-}
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+        }
 
-header h1{
-    margin-top:15px;
-    font-size:2.5rem;
-}
+        header h1 {
+            margin-top: 15px;
+            font-size: 2.5rem;
+        }
 
-header p{
-    font-size:1.1rem;
-}
+        header p {
+            font-size: 1.1rem;
+        }
 
-/* Navigation */
-nav{
-    background:#145c45;
-    text-align:center;
-    padding:15px;
-}
+        /* Navigation */
+        nav {
+            background: #145c45;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-nav a:hover{
-    color:#ffd700;
-}
+        nav a:hover {
+            color: #ffd700;
+        }
 
-/* Sections */
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 20px;
-}
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+        }
 
-h2{
-    text-align:center;
-    margin-bottom:20px;
-    color:#0d3b2e;
-}
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0d3b2e;
+        }
 
-/* About */
-.about{
-    text-align:center;
-}
+        /* About */
+        .about {
+            text-align: center;
+            font-size: 18px;
+        }
 
-/* Skills */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
 
-.skill{
-    background:#0d3b2e;
-    color:white;
-    padding:10px 20px;
-    border-radius:20px;
-}
+        .skill {
+            background: #0d3b2e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
 
-/* Projects */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.project-card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-.project-card h3{
-    margin-bottom:10px;
-    color:#145c45;
-}
+        .project-card h3 {
+            margin-bottom: 10px;
+            color: #145c45;
+        }
 
-/* Contact */
-.contact{
-    text-align:center;
-}
+        /* Story */
+        .story-container {
+            background: white;
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-.contact a{
-    color:#145c45;
-    text-decoration:none;
-    font-weight:bold;
-}
+        .story-container img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
 
-/* Footer */
-footer{
-    background:#0d3b2e;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-</style>
+        .story-container .caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .story-container p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* Video */
+        .video-section {
+            text-align: center;
+        }
+
+        .video-section iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #145c45;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d3b2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-<header>
-    <img src="https://via.placeholder.com/150" alt="My profile">
-    <h1>Gilbert Donato</h1>
-    <p>Student | Future Web Developer | Creative Thinker</p>
-</header>
+    <header>
+        <img src="profile.jpg" alt="Gilbert Donato">
+        <h1>Gilbert Donato</h1>
+        <p>Student | Future Web Developer | Creative Thinker</p>
+    </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#story">Story</a>
+        <a href="#video">Video</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-        <p>
-            Hello! My name is Gilbert Donato. I am a student who enjoys
-            learning technology, coding, and creating websites.
-            I am passionate about improving my skills and exploring new ideas.
-        </p>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>My Skills</h2>
-    <div class="skills">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Communication</div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects">
-
-        <div class="project-card">
-            <h3>Personal Profile Website</h3>
-            <p>A website introducing myself, my interests, and my achievements.</p>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+            <p>
+                Hello! My name is Gilbert Donato.
+                I am a student who enjoys learning technology,
+                coding, and creating websites.
+                I am passionate about improving my skills
+                and exploring new ideas.
+            </p>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>School Project</h3>
-            <p>A project created for educational purposes using HTML and CSS.</p>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Communication</div>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>A modern portfolio showcasing my skills and accomplishments.</p>
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+            <div class="project-card">
+                <h3>Personal Profile Website</h3>
+                <p>A website introducing myself, my interests, and my achievements.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>School Project</h3>
+                <p>A project created for educational purposes using HTML and CSS.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A modern portfolio showcasing my skills and accomplishments.</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <section id="story">
+        <h2>My Story Through Pictures</h2>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact">
-        <p>Email: Gilbert Donato</p>
-        <p>Facebook: <a href="#">https://www.facebook.com/gilbert.donato.568</a></p>
-        <p>Phone: +63 9128000891</p>
-    </div>
-</section>
+        <div class="story-container">
 
-<footer>
-    <p>&copy; 2026 gilbertdonato811@gmail.com. All Rights Reserved.</p>
-</footer>
+            <a href="https://cdn.imageurlgenerator.com/uploads/d201e019-e3f8-42da-a180-0edb8917159c.jpg"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="https://cdn.imageurlgenerator.com/uploads/d201e019-e3f8-42da-a180-0edb8917159c.jpg"
+                     alt="School Memory Photo">
+
+            </a>
+
+            <p class="caption">
+                Click the image to view the full photo.
+            </p>
+
+            <p>
+                This photo was taken during a memorable day at school.
+                It reminds me of the enjoyable moments I shared with my friends and classmates.
+            </p>
+
+            <p>
+                The school environment provided opportunities to learn, grow,
+                and build lasting memories.
+            </p>
+
+            <p>
+                Every experience helped shape who I am today.
+                Every photo tells a story.
+            </p>
+
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>My Video</h2>
+
+        <div class="video-section">
+            <iframe
+                src="https://drive.google.com/file/d/1fJSIRuw2oXFRQrRZ1ISnEfrDnTxMTa07/preview"
+                allow="autoplay">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+            <p>Email: gilbertdonato811@gmail.com</p>
+
+            <p>
+                Facebook:
+                <a href="https://www.facebook.com/gilbert.donato.568"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My Facebook
+                </a>
+            </p>
+
+            <p>Phone: +63 9128000891</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gilbert Donato. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
+```
